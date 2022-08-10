@@ -5,103 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="rcp.js" defer></script>
 </head>
 <body>
-   <script>
+  
+    <button value="rock">Rock</button>
+    <button value="scissors">Scissors</button>
+    <button value="paper">Paper</button>
 
-
-       
-function playRound(playerSelection, computerSelection) {
-         
-         
-         if(playerSelection == "rock" && computerSelection == "scissor"){
-             
-             return("PLayer Win");
-             
-         }
-        else  if(playerSelection == "paper" && computerSelection == "rock"){
-             
-             return("PLayer Win");
-             
-         }
-         else if(playerSelection == "scissor" && computerSelection == "paper"){
-             
-             return("PLayer Win");
-             
-         }
-         else if(playerSelection == computerSelection){
-             
-             
-             return("Draw");
-         }
-         else{
-             
-             return("Computer Win");
-         }
-         
-        }
-
-        function getComputerChoice(){
-        let i = Math.floor(Math.random() * 10);
-     
-        if(i<=3){
-
-            return "rock";
-        }
-
-       else if(i>3 && i<=7){
-
-            return "paper";
-            }
-
-        else if(i>7 && i<=10){
-
-            return "scissor";
-            }   
-            
-            
-
-    }
-    
-    function game(){
-        let player1 = 0;
-        let com = 0;
-        
-        for(let i=0;i<5;i++){
-            
-        const computerSelection = getComputerChoice();
-            
-        let result = playRound(playerSelection, computerSelection);
-        
-        
-        if(result == "PLayer Win"){
-          
-          console.log("PLayer Win");  
-            
-        }
-        else if(result == "Draw"){
-          
-           console.log("Draw");
-            
-        }
-       else if(result == "Computer Win"){
-          
-          console.log("Computer Win");
-            
-        }
-        
-       
-        
-            
-        }
-        
-    }
-    
-        const computerSelection = getComputerChoice();
-        const playerSelection = "rock";
-        game();
-
-        
-   </script>
+    <div id="container">
+        <div class="display"></div>
+        <div class="controls"></div>
+      </div>
 </body>
 </html>
